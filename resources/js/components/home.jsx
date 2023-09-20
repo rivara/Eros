@@ -8,7 +8,6 @@ const response = await axios.get(
   "http://127.0.0.1:8000/api/vehicles"
 );
 
-
 const ShowVehicles = () => {
    const [vehicles, setVehicles] = useState(response.data);
    const [type, setType] = useState();
@@ -173,122 +172,122 @@ const clear = () => {
 
 
 return (
-    <div class="container-fluid" >
-            <div class="row">
-                <nav class="col-md-2 sidebar border padding20" >
-                    <ul class="nav flex-column">           
-                        <li class="nav-item margintop20">
-                        <h6>Tipo de cliente</h6>
-                        <div>
-                          <select  value={selectedOption1}  class="form-control"  onChange={search}>
-                            <option value="0">&nbsp;</option>
-                            <option value="1">premium</option>
-                            <option value="2">special</option>
-                            <option value="3">basic</option>
-                          </select>
-                        </div>
+  <div class="container-fluid" >
+  <div class="row">
+      <nav class="col-md-2 sidebar border padding20" >
+          <ul class="nav flex-column">           
+              <li class="nav-item margintop20">
+              <h6>Tipo de cliente</h6>
+              <div>
+                <select  value={selectedOption1}  class="form-control"  onChange={search}>
+                  <option value="0">&nbsp;</option>
+                  <option value="1">premium</option>
+                  <option value="2">special</option>
+                  <option value="3">basic</option>
+                </select>
+              </div>
+              <br />
+              <h6>uso del vehiculo</h6>
+              <div>
+                <select  value={selectedOption2} class="form-control"  onChange={search}>
+                  <option value="0">&nbsp;</option>
+                  <option value="4">transport</option>
+                  <option value="5">urban</option>
+                  <option value="6">highway</option>
+                </select>
+              </div>
+            </li>
+            <li class="nav-item margintop20 w-100 ">
+              <h6>Precio</h6>
+              <button onClick={search}  class={isActive1 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="7">&#60;100€</button>
+              <button onClick={search}  class={isActive2 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="8">100 a 200 €</button>
+              <button onClick={search}  class={isActive3 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="9">&#62;200 €</button>
+            </li>
+            <li class="nav-item margintop20">
+              <h6>Autonomia</h6>
+              <button onClick={search} class={isActive4 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="10">&#60;70 km</button>
+              <button onClick={search} class={isActive5 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="11">70-100 km</button>
+              <button onClick={search} class={isActive6 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="12">&#62;100 km</button>
+            </li>
+            <li class="nav-item margintop20">
+              <h6>Duracion <small>Meses de contrrato</small></h6>
+              <button onClick={search} class={isActive7 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}value="13">12</button>
+              <button onClick={search} class={isActive8 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"} value="14">24</button>
+              <button onClick={search} class={isActive9 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"} value="15">36</button>
+              <button onClick={search} class={isActive10 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"} value="16">48</button>
+            </li> 
+            <li>
+              {/* <label>
+              Circulación autovia &nbsp;
+              </label> 
+              <input
+              disabled="disabled"
+              type="checkbox"
+              name="check1"
+              value="18"
+              onChange={search}
+              />
+
+              <br />
+              <label>
+              Conducir sin carnet &nbsp;
+              </label>
+              <input
+              disabled="disabled"
+              type="checkbox"
+              name="check2"
+              value="19"
+              onChange={search}
+              />
+
+              <br/>
+              <label>
+              Baul de carga &nbsp;
+              </label>
+              <input
+              disabled="disabled"
+              type="checkbox"
+              name="check3"
+              value="20"
+              onChange={search}
+              /> */}
+
+            </li>
+            <li>
+              <button type="button" class="btn btn-danger btn-sm btn-block mt-3" onClick={clear}>Limpiar</button>
+            </li>
+            <li>  
+              <button type="button" class="btn btn-success btn-sm btn-block mt-3" onClick={search}>Busca</button>
+            </li>                          
+         </ul>
+      </nav>
+      <main role="main" class="col-md-9 margintop20">
+          <div class="container">
+          <div class="row">
+              {vehicles.map((vehicle) => (
+              <div key={vehicle.id} class="col-md-3 mw250px">
+              
+                    <div class="w-100">
+                  
+                        <img src={vehicle.url}  width="250" height="150" /> 
+                      </div>  
+                      <div class="width70 fl">
+                        <p  class="txt1">{vehicle.description}</p>
                         <br />
-                        <h6>uso del vehiculo</h6>
-                        <div>
-                          <select  value={selectedOption2} class="form-control"  onChange={search}>
-                            <option value="0">&nbsp;</option>
-                            <option value="4">transport</option>
-                            <option value="5">urban</option>
-                            <option value="6">highway</option>
-                          </select>
-                        </div>
-                      </li>
-                      <li class="nav-item margintop20 w-100 ">
-                        <h6>Precio</h6>
-                        <button onClick={search}  class={isActive1 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="7">&#60;100€</button>
-                        <button onClick={search}  class={isActive2 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="8">100 a 200 €</button>
-                        <button onClick={search}  class={isActive3 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="9">&#62;200 €</button>
-                      </li>
-                      <li class="nav-item margintop20">
-                        <h6>Autonomia</h6>
-                        <button onClick={search} class={isActive4 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="10">&#60;70 km</button>
-                        <button onClick={search} class={isActive5 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="11">70-100 km</button>
-                        <button onClick={search} class={isActive6 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}  value="12">&#62;100 km</button>
-                      </li>
-                      <li class="nav-item margintop20">
-                        <h6>Duracion <small>Meses de contrrato</small></h6>
-                        <button onClick={search} class={isActive7 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"}value="13">12</button>
-                        <button onClick={search} class={isActive8 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"} value="14">24</button>
-                        <button onClick={search} class={isActive9 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"} value="15">36</button>
-                        <button onClick={search} class={isActive10 ? 'clicked btn btn-sm width100': "btn btn-sm width100 bg-grey"} value="16">48</button>
-                      </li> 
-                      <li>
-                        {/* <label>
-                        Circulación autovia &nbsp;
-                        </label> 
-                        <input
-                        disabled="disabled"
-                        type="checkbox"
-                        name="check1"
-                        value="18"
-                        onChange={search}
-                        />
-
-                        <br />
-                        <label>
-                        Conducir sin carnet &nbsp;
-                        </label>
-                        <input
-                        disabled="disabled"
-                        type="checkbox"
-                        name="check2"
-                        value="19"
-                        onChange={search}
-                        />
-
-                        <br/>
-                        <label>
-                        Baul de carga &nbsp;
-                        </label>
-                        <input
-                        disabled="disabled"
-                        type="checkbox"
-                        name="check3"
-                        value="20"
-                        onChange={search}
-                        /> */}
-
-                      </li>
-                      <li>
-                        <button type="button" class="btn btn-danger btn-sm btn-block mt-3" onClick={clear}>Limpiar</button>
-                      </li>
-                      <li>  
-                        <button type="button" class="btn btn-success btn-sm btn-block mt-3" onClick={search}>Busca</button>
-                      </li>                          
-                   </ul>
-                </nav>
-                <main role="main" class="col-md-9 margintop20">
-                    <div class="container">
-                    <div class="row">
-                        {vehicles.map((vehicle) => (
-                        <div key={vehicle.id} class="col-md-3 mw250px">
-                        
-                              <div class="w-100">
-                            
-                                  <img src={vehicle.url} alt="Girl in a jacket" width="250" height="150" /> 
-                                </div>  
-                                <div class="width70 fl">
-                                  <p  class="txt1">{vehicle.description}</p>
-                                  <br />
-                                </div>
-                                <div class="width30 fr" >
-                                    <span class="title1">Desde</span>
-                                    <span class="title2">{vehicle.price}€</span>
-                                    <span class="title3">Al mes</span>
-                                </div> 
-                          </div>
-                    ))}
-                    
-                    </div>     
-                    </div>  
-                </main>
-            </div>
-    </div>
+                      </div>
+                      <div class="width30 fr" >
+                          <span class="title1">Desde</span>
+                          <span class="title2">{vehicle.price}€</span>
+                          <span class="title3">Al mes</span>
+                      </div> 
+                </div>
+          ))}
+          
+          </div>     
+          </div>  
+      </main>
+  </div>
+</div>
 );
 }
 
