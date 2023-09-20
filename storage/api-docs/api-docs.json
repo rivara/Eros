@@ -1,0 +1,20 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Obtener datos de ejemplo",
+                "description": "Esta llamada obtiene datos de ejemplo de la API.",
+                "responses": {
+                    "200": {
+                        "description": "Respuesta exitosa"
+                    }
+                }
+            }       
+        }
+    }
+} 
