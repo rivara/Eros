@@ -52,9 +52,15 @@
 
 ## UML
 
-![bbdd](https://github.com/rivara/Role_play/assets/3527499/d1312397-0978-4e63-8645-b75e8eff7aec)
+![er](https://github.com/rivara/Eros/assets/3527499/199be4ff-532c-4a1d-a104-8c8535a624cf)
+
 
 ## Example
 
-https://github.com/rivara/Role_play/assets/3527499/370f2633-d4e6-4f13-8540-8961bb9cb11e
+
+
+
+https://github.com/rivara/Eros/assets/3527499/60d9a59f-2301-43f8-8c7e-cf7a965ea498
+
+
 
