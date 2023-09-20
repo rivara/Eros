@@ -1,8 +1,6 @@
 ## Role - Play
 
-![laravel](https://github.com/rivara/Role_play/assets/3527499/4d31cd2b-d494-4456-86b8-e3852757c28e)
-
-![react](https://github.com/rivara/Role_play/assets/3527499/eefd16d9-e5cb-45b2-aa8a-74f17d299522)
+![logo](https://github.com/rivara/Eros/assets/3527499/04588575-0468-438e-8170-e9598da9f6b3)
 
 
 <h2>Spanish</h2>
