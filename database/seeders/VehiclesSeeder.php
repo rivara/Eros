@@ -20,7 +20,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 12,
                 'use' => 1,
                 'type' => 3,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto1.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto1.png'
             ],
             [
                 'name' => "Vehicle2",
@@ -30,7 +30,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 24,
                 'use' =>2,
                 'type' => 2,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto2.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto2.png'
             ],
             [
                 'name' => "Vehicle3",
@@ -40,7 +40,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 38,
                 'use' =>2,
                 'type' => 2,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto3.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto3.png'
             ],
             [
                 'name' => "Vehicle4",
@@ -50,7 +50,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 24,
                 'use' => 1,
                 'type' => 3,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto4.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto4.png'
             ],
             [
                 'name' => "Vehicle5",
@@ -60,7 +60,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 12,
                 'use' => 1,
                 'type' => 3,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto5.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto5.png'
             ],
             [
                 'name' => "Vehicle6",
@@ -70,7 +70,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 24,
                 'use' =>2,
                 'type' => 2,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto6.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto6.png'
             ],
             [
                 'name' => "Vehicle7",
@@ -80,7 +80,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 24,
                 'use' =>2,
                 'type' => 2,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto7.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto7.png'
             ],
             [
                 'name' => "Vehicle8",
@@ -90,7 +90,7 @@ class VehiclesSeeder extends Seeder
                 'duration' => 36,
                 'use' => 1,
                 'type' => 3,
-                'url' => 'http://127.0.0.1:8000/storage/pics/moto8.jpg'
+                'url' => 'http://127.0.0.1:8000/storage/pics/moto8.png'
             ],
         ]);
     }
